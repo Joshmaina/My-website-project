@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Frutty Online Grocery Store</title>
+			<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+
+	<header>
+			<div class="logo">Frutty<span>Online Grocery Store</span></div>
+			<nav>
+					<a href="#" onclick="showPage('home')">Home</a>
+					<a href="#" onclick="showPage('categories')">Categories</a>
+					<a href="#" onclick="showPage('products')">Products</a>
+					<a href="#" onclick="showPage('about')">About</a>
+					<a href="#" onclick="showPage('contact')">Contact</a>
+					<a href="#" onclick="showPage('cart')" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</a>
+			</nav>
+	</header>
+
+	<main id="content">
+			<section id="home" class="page">
+					<div class="hero">
+							<h1>Welcome to Our Online Grocery Store</h1>
+							<p>Fresh, wholesome groceries delivered to your door. Shop from the comfort of your home!</p>
+							<button onclick="showPage('products')">Shop Now</button>
+					</div>
+			</section>
+
+			<section id="categories" class="page" style="display:none;">
+					<h2>Shop by Category</h2>
+					<div class="category-banner">
+							<img id="category-image" src="Images/Organic-apples.jpg" alt="Fruits & Vegetables">
+							<div class="category-overlay" id="category-text">Fruits & Vegetables</div>
+					</div>
+			</section>
+
+			<section id="products" class="page" style="display:none;">
+					<h2>Featured Products</h2>
+					<div class="grid">
+					</div>
+			</section>
+
+			<section id="about" class="page" style="display:none;">
+					<h2>About Frutty Online Grocery Store</h2>
+					<p>We started in 2023 with one goal: to make healthy eating accessible to everyone. We partner with local farmers to ensure you get the highest quality produce.</p>
+					<p>At Frutty, we are committed to improving the livelihoods of all stakeholders involved in our supply chain. By working directly with local farmers, we provide fair prices that support sustainable farming practices, enabling them to invest in their communities and families. Our suppliers and partners, including transporters and distributors, benefit from long-term relationships that offer stability and growth opportunities. Additionally, our team members enjoy competitive compensation, ongoing training, and a positive work culture that promotes work-life balance and career advancement.</p>
+					<p>Our vision extends beyond just delivering groceries; we strive for food equity, ensuring that nutritious food is available to all, regardless of location or socioeconomic status. We actively address food insecurity by expanding access to fresh produce in underserved areas and collaborating with community organizations to make healthy eating affordable and convenient.</p>
+					<p>We create employment opportunities through our expanding operations, from farming partnerships and harvesting to logistics, warehousing, and customer service. This not only stimulates local economies but also provides meaningful jobs that contribute to poverty reduction and community development.</p>
+					<p>Moreover, we prioritize general health improvement by promoting organic, fresh produce that supports a healthier lifestyle. We offer educational resources on nutrition, partner with health professionals to provide wellness tips, and ensure our products meet high standards for safety and quality. Join us in our mission to nourish communities, foster economic growth, and build a healthier future for everyone.</p>
+			</section>
+
+			<section id="contact" class="page" style="display:none;">
+					<h2>Contact Us</h2>
+					<form id="contact-form">
+							<input type="text" placeholder="Your Name" required>
+							<input type="email" placeholder="Your Email" required>
+							<textarea placeholder="Your Message"></textarea>
+							<button type="submit">Send Message</button>
+					</form>
+			</section>
+
+			<section id="cart" class="page" style="display:none;">
+					<h2>Your Shopping Cart</h2>
+					<div id="cart-items"></div>
+					<div class="cart-total">
+							<h3>Total: Ksh<span id="total-price">0.00</span></h3>
+							<button onclick="checkout()">Checkout</button>
+					</div>
+			</section>
+	</main>
+
+	<footer>
+			<p>&copy; 2026 Online Grocery Store. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+	</footer>
+
+	<script src="products.js"></script>
+	<script src="script.js"></script>
+	</body>
+</html>
