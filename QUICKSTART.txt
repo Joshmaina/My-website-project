@@ -37,8 +37,7 @@ Option 3: SERVER MODE (Optional)
 2. 📂 CATEGORY FILTER
    └─ Dropdown menu in products section
    └─ Filter by: All, Fruits & Vegetables, Dairy & Eggs, etc.
-   └─ Combine with search for powerful filtering
-
+   └─ Combine with search for powerful filteri
 3. 📊 SORT OPTIONS
    └─ Sort by: Name (A-Z)
    └─ Sort by: Price (Low → High)
