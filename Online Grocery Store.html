@@ -1,82 +1,331 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-			<meta charset="UTF-8">
-			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Frutty Online Grocery Store</title>
-			<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
+		<head>
+						<meta charset="UTF-8">
+						<meta name="viewport" content="width=device-width, initial-scale=1.0">
+						<title>Frutty Online Grocery Store</title>
+						<link rel="stylesheet" href="style.css">
+		</head>
+		<body>
 
-	<header>
-			<div class="logo">Frutty<span>Online Grocery Store</span></div>
-			<nav>
-					<a href="#" onclick="showPage('home')">Home</a>
-					<a href="#" onclick="showPage('categories')">Categories</a>
-					<a href="#" onclick="showPage('products')">Products</a>
-					<a href="#" onclick="showPage('about')">About</a>
-					<a href="#" onclick="showPage('contact')">Contact</a>
-					<a href="#" onclick="showPage('cart')" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</a>
-			</nav>
-	</header>
+		<header>
+						<div class="logo">Frutty<span>Online Grocery Store</span></div>
+						<nav>
+										<a href="#" onclick="showPage('home')">Home</a>
+										<a href="#" onclick="showPage('categories')">Categories</a>
+										<a href="#" onclick="showPage('products')">Products</a>
+										<a href="#" onclick="showPage('blog')">Blog</a>
+										<a href="#" onclick="showPage('about')">About</a>
+										<a href="#" onclick="showPage('contact')">Contact</a>
+										<a href="#" onclick="showPage('cart')" class="cart-btn">🛒 Cart (<span id="cart-count">0</span>)</a>
+						</nav>
+		</header>
 
-	<main id="content">
-			<section id="home" class="page">
-					<div class="hero">
-							<h1>Welcome to Our Online Grocery Store</h1>
-							<p>Fresh, wholesome groceries delivered to your door. Shop from the comfort of your home!</p>
-							<button onclick="showPage('products')">Shop Now</button>
-					</div>
-			</section>
+		<main id="content">
+						<section id="home" class="page">
+										<div class="hero">
+														<h1>Welcome to Our Online Grocery Store</h1>
+														<p>Fresh, wholesome groceries delivered to your door. Shop from the comfort of your home!</p>
+														<button onclick="showPage('products')">Shop Now</button>
+										</div>
+						</section>
 
-			<section id="categories" class="page" style="display:none;">
-					<h2>Shop by Category</h2>
-					<div class="category-banner">
-							<img id="category-image" src="Images/Organic-apples.jpg" alt="Fruits & Vegetables">
-							<div class="category-overlay" id="category-text">Fruits & Vegetables</div>
-					</div>
-			</section>
+						<section id="categories" class="page" style="display:none;">
+										<h2>Shop by Category</h2>
+										<div class="category-banner">
+														<img id="category-image" src="Images/Organic-apples.jpg" alt="Fruits & Vegetables">
+														<div class="category-overlay" id="category-text">Fruits & Vegetables</div>
+										</div>
+						</section>
 
-			<section id="products" class="page" style="display:none;">
-					<h2>Featured Products</h2>
-					<div class="grid">
-					</div>
-			</section>
+						<section id="products" class="page" style="display:none;">
+										<h2>Featured Products</h2>
+										<div class="grid">
+										</div>
+						</section>
 
-			<section id="about" class="page" style="display:none;">
-					<h2>About Frutty Online Grocery Store</h2>
-					<p>We started in 2023 with one goal: to make healthy eating accessible to everyone. We partner with local farmers to ensure you get the highest quality produce.</p>
-					<p>At Frutty, we are committed to improving the livelihoods of all stakeholders involved in our supply chain. By working directly with local farmers, we provide fair prices that support sustainable farming practices, enabling them to invest in their communities and families. Our suppliers and partners, including transporters and distributors, benefit from long-term relationships that offer stability and growth opportunities. Additionally, our team members enjoy competitive compensation, ongoing training, and a positive work culture that promotes work-life balance and career advancement.</p>
-					<p>Our vision extends beyond just delivering groceries; we strive for food equity, ensuring that nutritious food is available to all, regardless of location or socioeconomic status. We actively address food insecurity by expanding access to fresh produce in underserved areas and collaborating with community organizations to make healthy eating affordable and convenient.</p>
-					<p>We create employment opportunities through our expanding operations, from farming partnerships and harvesting to logistics, warehousing, and customer service. This not only stimulates local economies but also provides meaningful jobs that contribute to poverty reduction and community development.</p>
-					<p>Moreover, we prioritize general health improvement by promoting organic, fresh produce that supports a healthier lifestyle. We offer educational resources on nutrition, partner with health professionals to provide wellness tips, and ensure our products meet high standards for safety and quality. Join us in our mission to nourish communities, foster economic growth, and build a healthier future for everyone.</p>
-			</section>
+						<section id="about" class="page" style="display:none;">
+										<h2>About Frutty Online Grocery Store</h2>
+										
+										<!-- Our Grocery Ecosystem -->
+										<div class="about-ecosystem">
+														<h3>🌱 Our Grocery Ecosystem</h3>
+														<p>We started in 2023 with one goal: to make healthy eating accessible to everyone. We partner with local farmers to ensure you get the highest quality produce. At Frutty, we've built a thriving ecosystem that connects farmers, suppliers, logistics partners, and customers in a sustainable and fair way. Our network spans from farm to table, ensuring every step maintains quality, freshness, and integrity. We create employment opportunities through our expanding operations, from farming partnerships and harvesting to logistics, warehousing, and customer service. This not only stimulates local economies but also provides meaningful jobs that contribute to poverty reduction and community development.</p>
+														<img src="https://images.unsplash.com/photo-1488459716781-6518d406cb0f?w=600&h=400&fit=crop" alt="People shopping happily at grocery store" class="about-image">
+										</div>
 
-			<section id="contact" class="page" style="display:none;">
-					<h2>Contact Us</h2>
-					<form id="contact-form">
-							<input type="text" placeholder="Your Name" required>
-							<input type="email" placeholder="Your Email" required>
-							<textarea placeholder="Your Message"></textarea>
-							<button type="submit">Send Message</button>
-					</form>
-			</section>
+										<!-- Our Mission -->
+										<div class="about-card mission-card">
+														<h3>🎯 Our Mission</h3>
+														<div class="mission-content">
+																		<div class="mission-text">
+																				<p>Our mission is to nourish communities and empower families to live healthier, happier lives. We're committed to:</p>
+																				<ul>
+																						<li>Delivering fresh, organic produce directly from local farmers to your table</li>
+																						<li>Ensuring fair compensation for farmers and sustainable farming practices</li>
+																						<li>Providing quality employment and growth opportunities for our team</li>
+																						<li>Making nutritious food affordable and accessible to everyone</li>
+																						<li>Supporting health improvement through education and quality products</li>
+																				</ul>
+																		</div>
+																		<img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop" alt="Happy customer enjoying fresh groceries" class="mission-image">
+														</div>
+										</div>
 
-			<section id="cart" class="page" style="display:none;">
-					<h2>Your Shopping Cart</h2>
-					<div id="cart-items"></div>
-					<div class="cart-total">
-							<h3>Total: Ksh<span id="total-price">0.00</span></h3>
-							<button onclick="checkout()">Checkout</button>
-					</div>
-			</section>
-	</main>
+										<!-- Our Vision -->
+										<div class="about-card vision-card">
+														<h3>✨ Our Vision</h3>
+														<div class="vision-content">
+																		<img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=400&h=400&fit=crop" alt="Family shopping together with joy" class="vision-image">
+																		<div class="vision-text">
+																				<p>We envision a world where nutritious food is accessible to all, regardless of location or socioeconomic status. We strive for:</p>
+																				<ul>
+																						<li><strong>Food Equity:</strong> Expanding fresh produce access to underserved communities</li>
+																						<li><strong>Sustainability:</strong> Supporting eco-friendly farming and reducing our environmental impact</li>
+																						<li><strong>Community Growth:</strong> Building long-term relationships with local farmers and suppliers</li>
+																						<li><strong>Wellness:</strong> Empowering customers with nutrition education and wellness resources</li>
+																						<li><strong>Economic Development:</strong> Creating a thriving ecosystem that benefits all stakeholders</li>
+																				</ul>
+																		</div>
+														</div>
+										</div>
 
-	<footer>
-			<p>&copy; 2026 Online Grocery Store. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
-	</footer>
+										<!-- Our Commitment -->
+										<div class="about-commitment">
+														<h3>❤️ Our Commitment to You</h3>
+														<p>At Frutty, we are committed to improving the livelihoods of all stakeholders involved in our supply chain. By working directly with local farmers, we provide fair prices that support sustainable farming practices, enabling them to invest in their communities and families. Our suppliers and partners, including transporters and distributors, benefit from long-term relationships that offer stability and growth opportunities. Additionally, our team members enjoy competitive compensation, ongoing training, and a positive work culture that promotes work-life balance and career advancement.</p>
+														<p>We prioritize quality and safety in every product we deliver. We offer educational resources on nutrition, partner with health professionals to provide wellness tips, and ensure our products meet high standards for safety and quality. <strong>Join us in our mission to nourish communities, foster economic growth, and build a healthier future for everyone.</strong></p>
+														<img src="https://images.unsplash.com/photo-1516321318423-f06f70674e90?w=600&h=400&fit=crop" alt="Community shopping together" class="about-image">
+										</div>
+						</section>
 
-	<script src="products.js"></script>
-	<script src="script.js"></script>
-	</body>
+						<section id="blog" class="page" style="display:none;">
+										<h2>Frutty Blog - Health, Nutrition & Fresh Living</h2>
+										<p class="blog-intro">Discover the benefits of fresh, organic produce and learn why Frutty is your best online grocery destination.</p>
+										
+										<!-- Fun Facts Section -->
+										<div class="fun-facts-section">
+												<h3>🌟 Did You Know? Fun Facts About Our Products</h3>
+												<p class="facts-intro">Explore interesting and surprising facts about the fruits and vegetables you love!</p>
+												
+												<div class="facts-grid">
+														<!-- Fact 1 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍎</div>
+																<h4>Apples Never Sink!</h4>
+																<p>Apples are 25% air, which is why they float in water. This makes them perfect for bobbing games at parties!</p>
+																<span class="fact-category">Fun Trivia</span>
+														</div>
+
+														<!-- Fact 2 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🥕</div>
+																<h4>Carrots Weren't Always Orange</h4>
+																<p>The first carrots were purple and white! Orange carrots were developed in Holland in the 1600s as a tribute to the royal family.</p>
+																<span class="fact-category">History</span>
+														</div>
+
+														<!-- Fact 3 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍌</div>
+																<h4>Bananas Are Berries!</h4>
+																<p>Did you know? Bananas are technically berries, but strawberries aren't! Nature is full of surprises.</p>
+																<span class="fact-category">Science</span>
+														</div>
+
+														<!-- Fact 4 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍓</div>
+																<h4>Strawberry Seeds Have a Purpose</h4>
+																<p>Each strawberry has about 200 seeds on the outside. The more seeds, the sweeter and juicier the strawberry!</p>
+																<span class="fact-category">Fun Trivia</span>
+														</div>
+
+														<!-- Fact 5 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🥬</div>
+																<h4>Lettuce is Mostly Water</h4>
+																<p>Lettuce is 95% water! This makes it super hydrating and a perfect low-calorie snack for everyone.</p>
+																<span class="fact-category">Nutrition</span>
+														</div>
+
+														<!-- Fact 6 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🥦</div>
+																<h4>Broccoli is a Flower!</h4>
+																<p>What you eat as broccoli is actually the flower bud of the plant. It's like eating nature's bouquet—and it's delicious!</p>
+																<span class="fact-category">Science</span>
+														</div>
+
+														<!-- Fact 7 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍊</div>
+																<h4>Oranges Boost Immunity</h4>
+																<p>Just one orange provides 100% of your daily Vitamin C! Eating one orange can help your body fight off colds and illnesses.</p>
+																<span class="fact-category">Health Boost</span>
+														</div>
+
+														<!-- Fact 8 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🥬</div>
+																<h4>Spinach Makes You Stronger</h4>
+																<p>Spinach is packed with iron, which helps carry oxygen in your blood. While it won't make you super strong like Popeye, it definitely helps your muscles work better!</p>
+																<span class="fact-category">Nutrition</span>
+														</div>
+
+														<!-- Fact 9 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍇</div>
+																<h4>Grapes Can Explode!</h4>
+																<p>Grapes contain a lot of water and minerals. If you heat them in a microwave, they can actually create plasma and make a cool glowing effect!</p>
+																<span class="fact-category">Cool Science</span>
+														</div>
+
+														<!-- Fact 10 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🧅</div>
+																<h4>Onions Make You Cry</h4>
+																<p>Onions release a special gas when you cut them that stings your eyes. Chilling onions before cutting, or using a sharp knife, can help reduce tears!</p>
+																<span class="fact-category">Kitchen Hack</span>
+														</div>
+
+														<!-- Fact 11 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🥒</div>
+																<h4>Cucumbers Are Mostly Water</h4>
+																<p>Cucumbers are 96% water! They're one of the most hydrating vegetables and perfect for staying healthy and refreshed.</p>
+																<span class="fact-category">Hydration</span>
+														</div>
+
+														<!-- Fact 12 -->
+														<div class="fact-card">
+																<div class="fact-emoji">🍅</div>
+																<h4>Tomatoes Are Fruits, Not Veggies!</h4>
+																<p>Botanically speaking, tomatoes are berries! But the U.S. Supreme Court ruled them vegetables for cooking purposes. It's both a fruit AND a vegetable!</p>
+																<span class="fact-category">Fun Trivia</span>
+														</div>
+												</div>
+										</div>
+
+										<!-- Blog Posts -->
+										<div class="blog-container">
+												<!-- Blog Post 1 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop" alt="Fresh apples benefits">
+														<div class="blog-content">
+																<h3>The Power of Apples: Nature's Health Booster</h3>
+																<p class="blog-date">Published on January 10, 2026</p>
+																<p>Apples are one of nature's most nutritious fruits. Rich in fiber, vitamin C, and antioxidants, they support heart health, aid digestion, and boost immunity. At Frutty, we source the freshest organic apples directly from local farms. An apple a day keeps the doctor away—choose quality, choose Frutty!</p>
+																<div class="blog-tags">
+																		<span class="tag">Health Benefits</span>
+																		<span class="tag">Fruits</span>
+																		<span class="tag">Nutrition</span>
+																</div>
+														</div>
+												</article>
+
+												<!-- Blog Post 2 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1464226184081-280282a34a0b?w=600&h=400&fit=crop" alt="Leafy greens nutrition">
+														<div class="blog-content">
+																<h3>Green Leafy Vegetables: Your Gateway to Wellness</h3>
+																<p class="blog-date">Published on January 8, 2026</p>
+																<p>Spinach, kale, and lettuce are nutritional powerhouses packed with iron, calcium, and essential vitamins. They improve bone health, enhance brain function, and support weight management. Frutty delivers farm-fresh greens harvested at peak ripeness, ensuring maximum nutritional value. Make greens your daily habit for a healthier tomorrow!</p>
+																<div class="blog-tags">
+																		<span class="tag">Vegetables</span>
+																		<span class="tag">Wellness</span>
+																		<span class="tag">Organic</span>
+																</div>
+														</div>
+												</article>
+
+												<!-- Blog Post 3 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=600&h=400&fit=crop" alt="Why shop with Frutty">
+														<div class="blog-content">
+																<h3>Why Frutty is Your Best Choice for Online Grocery Shopping</h3>
+																<p class="blog-date">Published on January 5, 2026</p>
+																<p>Choosing an online grocery store is about more than convenience—it's about quality, trust, and community. Frutty stands out because we partner directly with local farmers, ensure fair compensation, and deliver produce within hours of harvest. Our commitment to sustainability, quality control, and customer satisfaction makes us the trusted choice for health-conscious families. Shop smart, shop Frutty!</p>
+																<div class="blog-tags">
+																		<span class="tag">Why Frutty</span>
+																		<span class="tag">Quality</span>
+																		<span class="tag">Local Farmers</span>
+																</div>
+														</div>
+												</article>
+
+												<!-- Blog Post 4 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1599599810694-a5c9b9b9a0b5?w=600&h=400&fit=crop" alt="Seasonal produce benefits">
+														<div class="blog-content">
+																<h3>Eat Seasonal: Why Local & Fresh Produce is Better</h3>
+																<p class="blog-date">Published on December 28, 2025</p>
+																<p>Seasonal produce is not just fresher—it's more nutritious, flavorful, and affordable. When fruits and vegetables are in season, they reach peak ripeness naturally, maximizing vitamins and minerals. Frutty focuses on seasonal offerings, supporting local farmers and reducing carbon footprints. Discover the joy of eating what nature intended for each season. Your taste buds and health will thank you!</p>
+																<div class="blog-tags">
+																		<span class="tag">Seasonal</span>
+																		<span class="tag">Local</span>
+																		<span class="tag">Sustainability</span>
+																</div>
+														</div>
+												</article>
+
+												<!-- Blog Post 5 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=400&fit=crop" alt="Organic vs conventional">
+														<div class="blog-content">
+																<h3>Organic vs. Conventional: Making the Right Choice</h3>
+																<p class="blog-date">Published on December 20, 2025</p>
+																<p>Organic produce is grown without synthetic pesticides and fertilizers, making it safer for your family and the environment. Studies show organic fruits and vegetables have higher nutrient density and fewer chemical residues. While organic options cost more, the health benefits make it a worthwhile investment. Frutty offers both conventional and organic choices, helping you make informed decisions for your family's health.</p>
+																<div class="blog-tags">
+																		<span class="tag">Organic</span>
+																		<span class="tag">Health</span>
+																		<span class="tag">Farming</span>
+																</div>
+														</div>
+												</article>
+
+												<!-- Blog Post 6 -->
+												<article class="blog-post">
+														<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?w=600&h=400&fit=crop" alt="Budget friendly grocery shopping">
+														<div class="blog-content">
+																<h3>Shop Smart: Budget-Friendly Healthy Eating Tips</h3>
+																<p class="blog-date">Published on December 15, 2025</p>
+																<p>Eating healthy doesn't have to break the bank. Shop seasonal produce, buy in bulk, plan your meals weekly, and reduce food waste. Frutty's direct farmer relationships mean lower prices without sacrificing quality. Our rewards program and special offers make nutritious eating accessible to all. Learn how to maximize your grocery budget while feeding your family the healthiest options available.</p>
+																<div class="blog-tags">
+																		<span class="tag">Budget Tips</span>
+																		<span class="tag">Money Saving</span>
+																		<span class="tag">Healthy</span>
+																</div>
+														</div>
+												</article>
+										</div>
+						</section>
+
+						<section id="contact" class="page" style="display:none;">
+										<h2>Contact Us</h2>
+										<form id="contact-form">
+														<input type="text" placeholder="Your Name" required>
+														<input type="email" placeholder="Your Email" required>
+														<textarea placeholder="Your Message"></textarea>
+														<button type="submit">Send Message</button>
+										</form>
+						</section>
+
+						<section id="cart" class="page" style="display:none;">
+										<h2>Your Shopping Cart</h2>
+										<div id="cart-items"></div>
+										<div class="cart-total">
+														<h3>Total: Ksh<span id="total-price">0.00</span></h3>
+														<button onclick="checkout()">Checkout</button>
+										</div>
+						</section>
+		</main>
+
+				<footer>
+          <p>&copy; 2026 Online Grocery Store. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms of Service</a></p>
+        </footer>
+
+		<script src="products.js"></script>
+		<script src="script.js"></script>
+		</body>
 </html>
