@@ -30,7 +30,7 @@ const products = [
     { name: 'Pork', price: 'Ksh750/kg', img: 'Images/Pork.jpg', category: 'Meat & Poultry' },
     { name: 'Kale', price: 'Ksh30/bunch', img: 'Images/Kale.jpg', category: 'Fruits & Vegetables' },
     { name: 'Butter', price: 'Ksh1500/kg', img: 'Images/Butter.jpg', category: 'Dairy & Eggs' },
-    { name: 'Sweet Potatoes', price: 'Ksh4.99/lb', img: 'Images/Sweet Potatoes.jpg', category: 'Fruits & Vegetables' },
+    { name: 'Sweet Potatoes', price: 'Ksh120/kg', img: 'Images/Sweet Potatoes.jpg', category: 'Fruits & Vegetables' },
     { name: 'Jute Mallow', price: 'Ksh40/bunch', img: 'Images/Jute Mallow.jpg', category: 'Fruits & Vegetables' },
     { name: 'Lamb', price: 'Ksh1000/kg', img: 'Images/Lamb.jpg', category: 'Meat & Poultry' },
     { name: 'Green Beans', price: 'Ksh250/kg', img: 'Images/Green Beans.jpg', category: 'Fruits & Vegetables' }
